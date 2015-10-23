@@ -25,30 +25,30 @@ droneDataApp.controller('MainCtrl', function ($scope, dataFactory, d3) {
     });
 });
                                       
-droneDataApp.directive('myChart', ['d3', function(d3) {
-    
+droneDataApp.directive('myChart', ['d3', function(d3) { 
     // directive constructor
     function link(scope, element, attr) {
         
         var data = scope.data;
-        var chart = d3.select(element[0]);
-       
+        var chart = d3.select(element[0]); 
+        console.log(scope);
+        
     }
 
     function draw(svg, width, height, data, dispatch) {
         
     }
-
+    
     return {
         link: link,
         restrict: 'E',
         replace: false,
-        scope: { data: '='},
+        scope: { data: '='}
         /*
         compile: function( element, attrs, transclude) {
             // create a SVG root element
              console.log(element);
         }
         */
-    }
+    };
 }]);
